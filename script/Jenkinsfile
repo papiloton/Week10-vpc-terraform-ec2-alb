@@ -12,5 +12,15 @@ pipeline{
                 sh 'terraform validate -n--color'
              }
             }
+             stage('fmt') {          
+            steps {
+                sh 'terraform  -n-fmt-color'
+             }
+            }
+            stage('plan') {          
+            steps {
+                sh 'terraform plan -n--color'
+             }
+            }
         }
    } 
