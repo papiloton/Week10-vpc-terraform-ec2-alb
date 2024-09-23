@@ -14,7 +14,7 @@ pipeline{
             }
              stage('fmt') {          
             steps {
-                sh 'terraform  -n-fmt-color'
+                sh 'terraform fmt -n-fmt-color'
              }
             }
             stage('plan') {          
